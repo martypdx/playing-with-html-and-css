@@ -11,8 +11,14 @@ changeButton.addEventListener('click', () => {
     greetingDisplay.textContent = greetingInput.value;
 });
 
-// // Example of syncing on input change (any text change):
-// greetingInput.addEventListener('input', () => {
-//     // 3. do the action
-//     greetingDisplay.textContent = greetingInput.value;
-// });
+const numberInput = document.getElementById('number-input');
+const addButton = document.getElementById('add-button');
+const addResult = document.getElementById('add-result');
+
+addButton.addEventListener('click', () => {
+    const number = Number(numberInput.value);
+    console.log(number);
+    addResult.textContent = number + 20;
+});
+
+
