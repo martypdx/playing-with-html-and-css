@@ -22,3 +22,44 @@ addButton.addEventListener('click', () => {
 });
 
 
+const incrementButton = document.getElementById('increment-button');
+const decrementButton = document.getElementById('decrement-button');
+const countDisplay = document.getElementById('count-display');
+
+let count = 3;
+countDisplay.textContent = count;
+
+incrementButton.addEventListener('click', () => {
+    // add one to the "count" state
+    count = count + 1;
+
+    // if(count === 0) {
+    //     decrementButton.disabled = true;
+    // }
+    // else {
+    //     decrementButton.disabled = false;
+    // }
+
+    // update count display
+    countDisplay.textContent = count;
+});
+
+decrementButton.addEventListener('click', () => {
+    if(count === 0) {
+        alert('No negative count');
+        return;
+    }
+
+    // add one to the "count" state
+    count = count - 1;
+
+    // if(count === 0) {
+    //     decrementButton.disabled = true;
+    // }
+    // else {
+    //     decrementButton.disabled = false;
+    // }
+
+    // update count display
+    countDisplay.textContent = count;
+});
