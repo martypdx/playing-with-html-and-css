@@ -41,3 +41,8 @@
     font-family: cursive;
     font-size: 2rem;
 }
+
+.profile {
+    display: flex;
+    height: 100px;
+}

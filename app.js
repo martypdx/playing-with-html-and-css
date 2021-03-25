@@ -33,12 +33,12 @@ incrementButton.addEventListener('click', () => {
     // add one to the "count" state
     count = count + 1;
 
-    // if(count === 0) {
-    //     decrementButton.disabled = true;
-    // }
-    // else {
-    //     decrementButton.disabled = false;
-    // }
+    if(count === 0) {
+        decrementButton.disabled = true;
+    }
+    else {
+        decrementButton.disabled = false;
+    }
 
     // update count display
     countDisplay.textContent = count;
@@ -53,13 +53,20 @@ decrementButton.addEventListener('click', () => {
     // add one to the "count" state
     count = count - 1;
 
-    // if(count === 0) {
-    //     decrementButton.disabled = true;
-    // }
-    // else {
-    //     decrementButton.disabled = false;
-    // }
+    if(count === 0) {
+        decrementButton.disabled = true;
+    }
+    else {
+        decrementButton.disabled = false;
+    }
 
     // update count display
     countDisplay.textContent = count;
 });
+
+const generateRobot = document.getElementById('generate-robot');
+const robot = document.getElementById('robot');
+
+generateRobot.addEventListener('click', () => {
+    robot.src = 'https://robohash.org/' + Math.random() + '.png';
+})
